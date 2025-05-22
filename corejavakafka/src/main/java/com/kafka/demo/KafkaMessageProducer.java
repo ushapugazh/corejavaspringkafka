@@ -40,12 +40,13 @@ public class KafkaMessageProducer {
 	         // Replace with your Kafka brokers and topic
 	        String brokers = "localhost:9092";
 	        String topic = "my-topic";
+	        String user ="User";
 
 	        KafkaMessageProducer producer = new KafkaMessageProducer(brokers, topic);
 
 	        try {
-	            producer.produceMessage("key1", "Hello, Kafka!");
-	            producer.produceMessage("key2", "Another message");
+	            producer.produceMessage("Hello User1", "Hello, !"+user + "Welcome");
+	            producer.produceMessage("Hello User1", "Lets Learn,code, practice and repeat");
 	        } finally {
 	            producer.close();
 	        }
